@@ -3,7 +3,7 @@ public abstract class Appliances implements HouseholdAppliance {
     private String serialNo;
     private double powerConsumption;
 
-    public Appliances(String serialNo, double powerConsumption) {
+    Appliances(String serialNo, double powerConsumption) {
         this.powerConsumption = powerConsumption;
         this.serialNo = serialNo;
     }
@@ -13,8 +13,13 @@ public abstract class Appliances implements HouseholdAppliance {
     public abstract double status();
 
 
-    public double getPowerConsumption() {
+    double getPowerConsumption() {
         return powerConsumption;
     }
+
+    /*Appliances SonyStereo = new StereoAmplifier("SN210", 210);
+    StereoAmplifier stereo = (StereoAmplifier) SonyStereo;
+    //Appliances SamsungVacumCleaner = new VacumCleaner("SN L911", 550, 280)};
+    */
 
 }

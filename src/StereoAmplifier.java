@@ -3,7 +3,7 @@ public class StereoAmplifier extends Appliances {
     private double actualConsumption;
 
 
-    public StereoAmplifier(String serialNo, double powerConsumption) {
+    StereoAmplifier(String serialNo, double powerConsumption) {
         super(serialNo, powerConsumption);
     }
 
@@ -27,7 +27,7 @@ public class StereoAmplifier extends Appliances {
         this.actualConsumption=0;
     }
 
-    public boolean isOn(){
+    private boolean isOn(){
         if (this.actualConsumption == getPowerConsumption() || this.actualConsumption==this.getPowerConsumption()*bassBoostConsumption)
             return  true;
         else
@@ -40,7 +40,6 @@ public class StereoAmplifier extends Appliances {
             this.actualConsumption = this.getPowerConsumption()*bassBoostConsumption;
 
     }
-
 
     public void BassBoostOff() {
         System.out.println("BassBoost Off");
